@@ -10,8 +10,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [provideRouter([
-    { component: HomeComponent, path: 'home-component'} // will work on ChildComponent
-  ], withComponentInputBinding())],
+  providers: [provideRouter(routes, withComponentInputBinding())],
 })
 export class AppRoutingModule { }
